@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,108 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+  <header class="header">
+    <h1 class="header__title"><img src="img/logo01.png" alt="Mag88"></h1>
+  </header>
+
+  <main>
+    <section class="magazine wrapper">
+      <h2 class="magazine__title">A special, long article in a newspaper or magazine</h2>
+      <p class="magazine__text">
+        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+        テキストテキストテキストテキストテキストテキストテキストテキスト
+      </p>
+      <div class="magazine__items flex-container">
+        <a class="magazine__item" href="#">
+          <img class="magazine__item-image" src="img/img02.png" alt="テキストテキストテキストテキスト">
+          <div class="magazine__item-text">
+            <p class="magazine__item-title">Archive</p>
+            <p>
+              テキストテキストテキストテキスト<br>
+              テキストテキストテキスト
+            </p>
+          </div>
+        </a>
+        <a class="magazine__item" href="#">
+          <img class="magazine__item-image" src="img/img02.png" alt="テキストテキストテキストテキスト">
+          <div class="magazine__item-text">
+            <p class="magazine__item-title">New</p>
+            <p>
+              テキストテキストテキストテキスト<br>
+              テキストテキストテキスト
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="fashion">
+      <div class="fashion__wrapper wrapper">
+        <h2 class="fashion__title sec-title">Fashion &amp; Style</h2>
+        <p class="fashion__text">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <a class="fashion__btn btn" href="#">Read More</a>
+      </div>
+    </section>
+
+    <section class="catalog">
+      <div class="catalog__wrapper flex-container wrapper">
+        <div class="catalog__item">
+          <img class="catalog__image" src="img/img02.png" alt="">
+        </div>
+        <div class="catalog__item">
+          <h2 class="catalog__title sec-title">Catalog</h2>
+          <p class="catalog__text">
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="antique">
+      <div class="antique__wrapper flex-container wrapper">
+        <div class="antique__item">
+          <h2 class="antique__title sec-title">Antique</h2>
+          <p class="antique__text">
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p>
+          <a class="antique__btn btn" href="#">Read More</a>
+        </div>
+        <div class="antique__item">
+          <img class="antique__image" src="img/img03.png" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper flex-container wrapper">
+      <div class="footer__item">
+        <a href="index.html"><img class="footer__logo" src="img/logo01.png" alt="Mag88"></a>
+      </div>
+      <div class="footer__item">
+        <p class="footer__title">タイトル</p>
+        <ul class="footer__list">
+          <li class="footer__list-item">テキストテキストテキスト</li>
+          <li class="footer__list-item">テキストテキストテキスト</li>
+          <li class="footer__list-item">テキストテキストテキスト</li>
+          <li class="footer__list-item">テキストテキストテキスト</li>
+          <li class="footer__list-item">テキストテキストテキスト</li>
+        </ul>
+      </div>
+      <div class="footer__item">
+        <p class="footer__title">タイトルタイトルタイトル</p>
+        <p class="footer__text">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+      </div>
+    </div>
+    <p class="footer__copyright">&copy; Mag88</p>
+  </footer>
 </body>
+
 </html>

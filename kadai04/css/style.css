@@ -1,1 +1,272 @@
 /* BEMの命名規則でコーディング */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.btn {
+  color: #2a2a2a;
+  border: solid 1px #2a2a2a;
+  display: inline-block;
+  font-size: 0.750rem;
+  padding: 14px 36px;
+  margin-top: 30px;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  background-image: url(../img/img01.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.header__title {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Main Content */
+.magazine {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.magazine__title,
+.fashion__title,
+.catalog__title,
+.antique__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.magazine__items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.magazine__item {
+  width: 49%;
+  position: relative;
+}
+
+.magazine__item-text {
+  max-width: 290px;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 15px 0;
+  margin: 0 auto;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+}
+
+.magazine__item-title {
+  font-size: 1.25rem;
+  margin-bottom: 2px;
+}
+
+.fashion {
+  height: 520px;
+  background-image: url(../img/img01.png);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+.catalog {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+.catalog__wrapper,
+.antique__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.catalog__item,
+.antique__item {
+  width: 48%;
+  text-align: center;
+}
+
+.catalog__image,
+.antique__image {
+  width: 100%;
+}
+
+.antique {
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+
+/* Button */
+.btn {
+  color: #2a2a2a;
+  border: solid 1px #2a2a2a;
+  display: inline-block;
+  font-size: 0.750rem;
+  padding: 14px 36px;
+  margin-top: 30px;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  font-size: 0.750rem;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer__item {
+  width: 33%;
+  line-height: 2;
+}
+
+.footer__item:first-child {
+  padding: 60px 0;
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__list-item {
+  margin-bottom: 10px;
+}
+
+.footer__copyright {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-container .item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Header */
+  .header {
+    height: 100vh;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .header__title {
+    position: static;
+  }
+
+  /* Magazineセクション */
+  .magazine__items {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .magazine__item {
+    width: 100%;
+  }
+
+  .magazine__item:first-child  {
+    margin-bottom: 30px;
+  }
+
+  /* Fashionセクション */
+  .fashion {
+    background-size: cover;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  /* Catalog & Antiqueセクション */
+  .catalog__wrapper,
+  .antique__wrapper {
+    flex-direction: column;
+  }
+
+  .catalog__item,
+  .antique__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .catalog__item p,
+  .antique__item p {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  /* Footer */
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer__item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer__item:first-child {
+    text-align: center;
+    padding: 0;
+  }
+}
