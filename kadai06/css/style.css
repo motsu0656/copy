@@ -73,17 +73,15 @@ a {
 }
 
 .section-title {
-  display: flex;
   font-weight: normal;
-  line-height: 1;
   writing-mode: vertical-rl;
 }
 
-.section-title__en {
+.section-title__en2 {
   display: block;
   font-size: 0.875rem;
   padding-top: 20px;
-  padding-right: 12px;
+  padding:16px 16px;
 }
 
 .section-title__ja {
@@ -153,8 +151,12 @@ a {
 
 .products__title1{
   margin-left: 10px;
+  display: flex;
 }
 
+.products__title2{
+  display: flex;
+}
 
 #products1 .products__text {
   background: rgba(249, 233, 6, 0.6);
