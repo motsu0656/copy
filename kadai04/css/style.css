@@ -1,34 +1,48 @@
 /* BEMの命名規則でコーディング */
 
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.875rem;
+  color: #2a2a2a;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
-.wrapper {
+a:hover {
+  opacity: 0.7;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+/*-------------------------------------------
+共通の設定
+-------------------------------------------*/
+.section__content {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
+.section__title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* ボタン */
 .btn {
   color: #2a2a2a;
   border: solid 1px #2a2a2a;
@@ -38,7 +52,14 @@ a {
   margin-top: 30px;
 }
 
-/* Header */
+.btn--primary {
+  border-color: #000;
+  color: #000;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
 .header {
   height: 100vh;
   background-image: url(../img/img01.png);
@@ -49,28 +70,18 @@ a {
   position: relative;
 }
 
-.header__title {
+.header__logo {
   position: absolute;
   top: 30px;
   right: 30px;
 }
 
-img {
-  max-width: 100%;
-}
-
-/* Main Content */
+/*-------------------------------------------
+Magazineセクション
+-------------------------------------------*/
 .magazine {
   text-align: center;
   margin-bottom: 80px;
-}
-
-.magazine__title,
-.fashion__title,
-.catalog__title,
-.antique__title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
 }
 
 .magazine__items {
@@ -84,7 +95,7 @@ img {
   position: relative;
 }
 
-.magazine__item-text {
+.magazine__text {
   max-width: 290px;
   color: #fff;
   font-weight: bold;
@@ -102,9 +113,12 @@ img {
   margin-bottom: 2px;
 }
 
+/*-------------------------------------------
+Fashionセクション
+-------------------------------------------*/
 .fashion {
   height: 520px;
-  background-image: url(../img/img01.png);
+  background-image: url(../img/img02.png);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -113,13 +127,17 @@ img {
   margin-bottom: 80px;
 }
 
-.catalog {
+/*-------------------------------------------
+Catalog & Antiqueセクション
+-------------------------------------------*/
+.catalog,
+.antique {
   background-color: #f5f5f5;
   padding: 60px 0;
 }
 
-.catalog__wrapper,
-.antique__wrapper {
+.catalog__items,
+.antique__items {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,33 +149,26 @@ img {
   text-align: center;
 }
 
-.catalog__image,
-.antique__image {
+.catalog__item img,
+.antique__item img {
   width: 100%;
 }
 
-.antique {
-  background-color: #f5f5f5;
-  padding: 60px 0;
+.catalog__item p,
+.antique__item p {
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-/* Button */
-.btn {
-  color: #2a2a2a;
-  border: solid 1px #2a2a2a;
-  display: inline-block;
-  font-size: 0.750rem;
-  padding: 14px 36px;
-  margin-top: 30px;
-}
-
-/* Footer */
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
 .footer {
   background-color: #333;
   font-size: 0.750rem;
 }
 
-.footer__wrapper {
+.footer__items {
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -174,13 +185,14 @@ img {
   padding: 60px 0;
 }
 
+.footer__item li::before {
+  content: "-";
+  margin-right: 5px;
+}
+
 .footer__title {
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.footer__list-item {
   margin-bottom: 10px;
 }
 
@@ -190,83 +202,32 @@ img {
   padding: 30px 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
+/*-------------------------------------------
+SP対応
+-------------------------------------------*/
+@media screen and (max-width: 896px) {
 
-  .flex-container .item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  /* Header */
-  .header {
-    height: 100vh;
-    padding: 50px 20px;
-    text-align: center;
-  }
-
-  .header__title {
-    position: static;
-  }
-
-  /* Magazineセクション */
-  .magazine__items {
-    flex-direction: column;
-    margin-top: 20px;
-  }
-
-  .magazine__item {
-    width: 100%;
-  }
-
-  .magazine__item:first-child  {
-    margin-bottom: 30px;
-  }
-
-  /* Fashionセクション */
-  .fashion {
-    background-size: cover;
-    height: auto;
-    padding: 30px 20px;
-  }
-
-  /* Catalog & Antiqueセクション */
-  .catalog__wrapper,
-  .antique__wrapper {
+  .magazine__items,
+  .catalog__items,
+  .antique__items,
+  .footer__items {
     flex-direction: column;
   }
 
+  .magazine__item,
   .catalog__item,
-  .antique__item {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .catalog__item p,
-  .antique__item p {
-    text-align: left;
-    margin-bottom: 30px;
-  }
-
-  /* Footer */
-  .footer__wrapper {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
+  .antique__item,
   .footer__item {
     width: 100%;
-    margin-bottom: 20px;
   }
 
-  .footer__item:first-child {
+  .magazine__item:first-child,
+  .catalog__item:first-child,
+  .antique__item:first-child {
+    margin-bottom: 30px;
+  }
+
+  .footer__img{
     text-align: center;
-    padding: 0;
   }
 }

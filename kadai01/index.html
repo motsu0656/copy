@@ -1,72 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>Profile</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
 
-  <body>
-    <header class="header wrapper">
-      <h1 class="header__title"><a href="#"><img src="img/logo.png" alt="Profile"></a></h1>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
-          <li class="header__nav-item"><a href="#bicycle" class="header__nav-link">Bicycle</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title>Profile</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <main class="main">
-      <div class="mainvisual">
-        <img src="img/mainvisual.jpg" alt="テキストテキストテキスト" class="mainvisual__image">
-      </div>
+<body>
+  <header class="header wrapper">
+    <h1 class="header__title">
+      <a href="index.html" class="header__logo-link">
+        <img src="img/logo.png" alt="Profile" class="header__logo">
+      </a>
+    </h1>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-item"><a href="#about" class="header__nav-link">About</a></li>
+        <li class="header__nav-item"><a href="#bicycle" class="header__nav-link">Bicycle</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <section id="about" class="about wrapper">
-        <h2 class="about__title">About</h2>
-        <div class="about__content">
-          <img src="img/about.jpg" alt="テキストテキストテキスト" class="about__image">
-          <div class="about__text">
-            <h3 class="about__name">KAKERU MIYAICHI</h3>
-            <p>
-              テキストテキストテキストテキストテキストテキストテキスト<br>
-              テキストテキストテキストテキストテキストテキストテキスト<br>
-              テキストテキストテキストテキストテキストテキストテキスト
-            </p>
-          </div>
+  <main class="main">
+    <div class="main-visual">
+      <img src="img/mainvisual.jpg" alt="テキストテキストテキスト" class="main-visual__image">
+    </div>
+
+    <section id="about" class="about wrapper">
+      <h2 class="about__title section-title">About</h2>
+      <div class="about__content">
+        <img src="img/about.jpg" alt="テキストテキストテキスト" class="about__image">
+        <div class="about__text">
+          <h3 class="about__content-title">KAKERU MIYAICHI</h3>
+          <p class="about__description">
+            テキストテキストテキストテキストテキストテキストテキスト<br>
+            テキストテキストテキストテキストテキストテキストテキスト<br>
+            テキストテキストテキストテキストテキストテキストテキスト
+          </p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="bicycle" class="bicycle wrapper">
-        <h2 class="bicycle__title">Bicycle</h2>
-        <ul class="bicycle__list">
-          <li class="bicycle__item">
-            <img src="img/bicycle1.jpg" alt="テキストテキストテキスト" class="bicycle__image">
-            <h3 class="bicycle__item-title">タイトルタイトル</h3>
-            <p>テキストテキストテキスト</p>
-          </li>
-          <li class="bicycle__item">
-            <img src="img/bicycle2.jpg" alt="テキストテキストテキスト" class="bicycle__image">
-            <h3 class="bicycle__item-title">タイトルタイトル</h3>
-            <p>テキストテキストテキスト</p>
-          </li>
-          <li class="bicycle__item">
-            <img src="img/bicycle3.jpg" alt="テキストテキストテキスト" class="bicycle__image">
-            <h3 class="bicycle__item-title">タイトルタイトル</h3>
-            <p>テキストテキストテキスト</p>
-          </li>
-        </ul>
-      </section>
-    </main>
+    <section id="bicycle" class="bicycle wrapper">
+      <h2 class="bicycle__title section-title">Bicycle</h2>
+      <ul class="bicycle__list">
+        <li class="bicycle__item">
+          <img src="img/bicycle1.jpg" alt="テキストテキストテキスト" class="bicycle__image">
+          <h3 class="bicycle__item-title">タイトルタイトル</h3>
+          <p class="bicycle__description">テキストテキストテキスト</p>
+        </li>
+        <li class="bicycle__item">
+          <img src="img/bicycle2.jpg" alt="テキストテキストテキスト" class="bicycle__image">
+          <h3 class="bicycle__item-title">タイトルタイトル</h3>
+          <p class="bicycle__description">テキストテキストテキスト</p>
+        </li>
+        <li class="bicycle__item">
+          <img src="img/bicycle3.jpg" alt="テキストテキストテキスト" class="bicycle__image">
+          <h3 class="bicycle__item-title">タイトルタイトル</h3>
+          <p class="bicycle__description">テキストテキストテキスト</p>
+        </li>
+      </ul>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p>&copy; 2020 Profile</p>
-    </footer>
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2020 Profile</p>
+  </footer>
 
-  </body>
+</body>
 
 </html>

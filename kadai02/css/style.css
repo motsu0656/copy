@@ -1,81 +1,100 @@
 /* BEMの命名規則でコーディング */
 
-h1,
-h2 {
-  font-weight: bold;
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
 }
 
-.recipe-page__container {
+body {
+  color: #2b2a27;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #2b2a27;
+}
+
+/*-------------------------------------------
+Recipe
+-------------------------------------------*/
+.recipe__container {
   display: flex;
   margin-bottom: 60px;
 }
 
-.recipe-page__image {
+.recipe__image {
   width: 50%;
 }
 
-.recipe-page__image img {
+.recipe__image img {
   width: 100%;
   height: 700px;
   object-fit: cover;
   vertical-align: bottom;
 }
 
-.recipe-page__content {
+.recipe__content {
   width: 50%;
   padding: 40px 5% 0 5%;
 }
 
-.recipe-page__title {
+.recipe__title {
   font-size: 1.75rem;
   margin-bottom: 20px;
 }
 
-.recipe-page__section-title {
+.recipe__subtitle {
   border-bottom: solid 1px #ccc;
   font-size: 1.25rem;
   padding-bottom: 5px;
   margin: 40px 0 15px 0;
 }
 
-.recipe-page__ingredient-list {
+.recipe__ingredient-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.recipe-page__ingredient-name {
+.recipe__ingredient-item {
   width: 85%;
   border-bottom: dotted 1px #ccc;
   padding: 6px 0;
 }
 
-.recipe-page__ingredient-amount {
+.recipe__ingredient-quantity {
   width: 15%;
   border-bottom: dotted 1px #ccc;
   padding: 6px 0;
   text-align: right;
 }
 
-.recipe-page__steps {
-  display: block;
-  list-style-type: decimal;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
+.recipe__step-list {
+  margin-left: 20px;
 }
 
-.recipe-page__step-item {
-  border-bottom: solid 1px #ccc;
+.recipe__step-item {
+  border-bottom: dotted 1px #ccc;
+  padding: 6px 0;
 }
 
-.recipe-page__btn {
+/*-------------------------------------------
+Button
+-------------------------------------------*/
+.button {
   text-align: center;
   margin-bottom: 80px;
 }
 
-.recipe-page__btn-link {
+.button__link {
   display: inline-block;
   border: solid 1px #2b2a27;
   font-size: 0.875rem;
@@ -83,36 +102,47 @@ h2 {
   text-decoration: none;
 }
 
-.footer {
+/*-------------------------------------------
+Footer
+-------------------------------------------*/
+#footer {
   font-size: 0.75rem;
   padding: 20px;
   text-align: center;
 }
 
-.footer__sns-list {
+.sns-list {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.footer__sns-item {
+.sns-list__item {
   margin: 0 10px;
 }
 
+.footer__copyright {
+  margin-top: 20px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
 @media screen and (max-width: 834px) {
-  .recipe-page__container {
+
+  .recipe__container {
     flex-direction: column;
   }
 
-  .recipe-page__image {
+  .recipe__image {
     width: 100%;
   }
 
-  .recipe-page__image img {
+  .recipe__image img {
     height: auto;
   }
 
-  .recipe-page__content {
+  .recipe__content {
     width: 100%;
   }
 }

@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <meta charset="utf-8">
+  <title>Recipe Diary</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <main class="recipe-page">
-    <div class="recipe-page__container">
-      <div class="recipe-page__image">
+  <main>
+    <div class="recipe__container">
+      <div class="recipe__image">
         <img src="img/img01.png" alt="">
       </div>
 
-      <div class="recipe-page__content">
-        <h1 class="recipe-page__title">ひよこ豆とアボガドのタコス</h1>
-        <p class="recipe-page__description">たっぷりのひよこ豆とレンズ豆にアボガドとトマトを添えて、少しライムを絞ったらおいしいタコスのできあがりです。</p>
+      <div class="recipe__content">
+        <h1 class="recipe__title">ひよこ豆とアボガドのタコス</h1>
+        <p class="recipe__description">たっぷりのひよこ豆とレンズ豆にアボガドとトマトを添えて、少しライムを絞ったらおいしいタコスのできあがりです。</p>
 
-        <h2 class="recipe-page__section-title">材料（2人分）</h2>
-        <dl class="recipe-page__ingredient-list">
-          <dt class="recipe-page__ingredient-name">テキストテキスト</dt>
-          <dd class="recipe-page__ingredient-amount">1個</dd>
-          <dt class="recipe-page__ingredient-name">テキストテキスト</dt>
-          <dd class="recipe-page__ingredient-amount">1個</dd>
-          <dt class="recipe-page__ingredient-name">テキストテキスト</dt>
-          <dd class="recipe-page__ingredient-amount">1個</dd>
-          <dt class="recipe-page__ingredient-name">テキストテキスト</dt>
-          <dd class="recipe-page__ingredient-amount">1個</dd>
-          <dt class="recipe-page__ingredient-name">テキストテキスト</dt>
-          <dd class="recipe-page__ingredient-amount">1個</dd>
+        <h2 class="recipe__subtitle">材料（2人分）</h2>
+        <dl class="recipe__ingredient-list">
+          <dt class="recipe__ingredient-item">テキストテキスト</dt>
+          <dd class="recipe__ingredient-quantity">1個</dd>
+          <dt class="recipe__ingredient-item">テキストテキスト</dt>
+          <dd class="recipe__ingredient-quantity">1個</dd>
+          <dt class="recipe__ingredient-item">テキストテキスト</dt>
+          <dd class="recipe__ingredient-quantity">1個</dd>
+          <dt class="recipe__ingredient-item">テキストテキスト</dt>
+          <dd class="recipe__ingredient-quantity">1個</dd>
+          <dt class="recipe__ingredient-item">テキストテキスト</dt>
+          <dd class="recipe__ingredient-quantity">1個</dd>
         </dl>
 
-        <h2 class="recipe-page__section-title">作り方</h2>
-        <ol class="recipe-page__steps">
-          <li class="recipe-page__step-item">テキストテキストテキストテキスト</li>
-          <li class="recipe-page__step-item">テキストテキストテキストテキスト</li>
-          <li class="recipe-page__step-item">テキストテキストテキストテキスト</li>
-          <li class="recipe-page__step-item">テキストテキストテキストテキスト</li>
-          <li class="recipe-page__step-item">テキストテキストテキストテキスト</li>
+        <h2 class="recipe__subtitle">作り方</h2>
+        <ol class="recipe__step-list">
+          <li class="recipe__step-item">テキストテキストテキストテキスト</li>
+          <li class="recipe__step-item">テキストテキストテキストテキスト</li>
+          <li class="recipe__step-item">テキストテキストテキストテキスト</li>
+          <li class="recipe__step-item">テキストテキストテキストテキスト</li>
+          <li class="recipe__step-item">テキストテキストテキストテキスト</li>
         </ol>
       </div>
     </div>
 
-    <div class="recipe-page__btn">
-      <a href="#" class="recipe-page__btn-link">レシピ一覧を見る</a>
+    <div class="button">
+      <a href="#" class="button__link">レシピ一覧を見る</a>
     </div>
   </main>
 
-  <footer class="footer">
-    <ul class="footer__sns-list">
-      <li class="footer__sns-item"><a href="#">Instagram</a></li>
-      <li class="footer__sns-item"><a href="#">Twitter</a></li>
-      <li class="footer__sns-item"><a href="#">Facebook</a></li>
+  <footer id="footer">
+    <ul class="sns-list">
+      <li class="sns-list__item"><a href="#">Instagram</a></li>
+      <li class="sns-list__item"><a href="#">Twitter</a></li>
+      <li class="sns-list__item"><a href="#">Facebook</a></li>
     </ul>
     <p class="footer__copyright">&copy; 2021 Recipe Diary</p>
   </footer>
 </body>
+
 </html>

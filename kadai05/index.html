@@ -2,25 +2,28 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <meta charset="utf-8">
+  <title>Web Entertainment Design</title>
+  <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header__inner wrapper">
-      <h1 class="header__logo">
-        <a href="index.html"><img src="img/logo01.png" alt="Web Entertainment Design"></a>
+      <h1 class="logo">
+        <a class="logo__link" href="index.html"><img class="logo__image" src="img/logo01.png"
+            alt="Web Entertainment Design"></a>
       </h1>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item"><a href="#news">NEWS</a></li>
-          <li class="header__nav-item"><a href="#about">ABOUT</a></li>
-          <li class="header__nav-item"><a href="#business">BUSINESS</a></li>
-          <li class="header__nav-item"><a href="#company">COMPANY</a></li>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#news">NEWS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#about">ABOUT</a></li>
+          <li class="nav__item"><a class="nav__link" href="#business">BUSINESS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#company">COMPANY</a></li>
         </ul>
       </nav>
     </div>
@@ -28,8 +31,8 @@
   </header>
 
   <main>
-    <div id="mainvisual" class="main-visual">
-      <img src="img/img01.png" alt="">
+    <div class="main-visual">
+      <img class="main-visual__image" src="img/img01.png" alt="">
     </div>
 
     <section id="news" class="news wrapper">
@@ -44,28 +47,28 @@
             <time class="news__date" datetime="2021-01-01">2021.01.01</time>
             <span class="news__category">NEWS</span>
           </div>
-          <p class="news__text">タイトルタイトルタイトルタイトル</p>
+          <p class="news__description">タイトルタイトルタイトルタイトル</p>
         </li>
         <li class="news__item">
           <div class="news__date-area">
             <time class="news__date" datetime="2021-01-01">2021.01.01</time>
             <span class="news__category">PRESS</span>
           </div>
-          <p class="news__text">タイトルタイトルタイトルタイトル</p>
+          <p class="news__description">タイトルタイトルタイトルタイトル</p>
         </li>
         <li class="news__item">
           <div class="news__date-area">
             <time class="news__date" datetime="2021-01-01">2021.01.01</time>
             <span class="news__category">NEWS</span>
           </div>
-          <p class="news__text">タイトルタイトルタイトルタイトル</p>
+          <p class="news__description">タイトルタイトルタイトルタイトル</p>
         </li>
       </ul>
     </section>
 
     <section id="about" class="about">
-      <div class="about__img">
-        <img src="img/img02.png" alt="">
+      <div class="about__image">
+        <img class="about__img" src="img/img02.png" alt="">
       </div>
 
       <div class="about__text">
@@ -94,26 +97,26 @@
         <span class="section-title__ja">事業内容</span>
       </h2>
 
-      <div class="business__flex">
-        <div class="business__left">
+      <div class="business__content">
+        <div class="business__column business__column--left">
           <div class="business__item">
             <p class="business__item-title">Web制作・マーケティング</p>
-            <img src="img/img02.png" alt="">
+            <img class="business__item-image" src="img/img03.png" alt="">
           </div>
           <div class="business__item">
             <p class="business__item-title">インターネットメディア事業</p>
-            <img src="img/img02.png" alt="">
+            <img class="business__item-image" src="img/img03.png" alt="">
           </div>
         </div>
 
-        <div class="business__right">
+        <div class="business__column business__column--right">
           <div class="business__item">
             <p class="business__item-title">プロモーション企画・制作</p>
-            <img src="img/img02.png" alt="">
+            <img class="business__item-image" src="img/img03.png" alt="">
           </div>
           <div class="business__item">
             <p class="business__item-title">ソーシャル企画・運営</p>
-            <img src="img/img02.png" alt="">
+            <img class="business__item-image" src="img/img03.png" alt="">
           </div>
         </div>
       </div>
@@ -127,44 +130,44 @@
         </h2>
 
         <dl class="company__info">
-          <dt class="company__info-term">会社名</dt>
-          <dd class="company__info-detail">ウェブエンターテイメントデザイン株式会社</dd>
-          <dt class="company__info-term">所在地</dt>
-          <dd class="company__info-detail">東京都渋谷区桜丘町99-9 West Building 3F</dd>
-          <dt class="company__info-term">代表</dt>
-          <dd class="company__info-detail">ＸＸＸＸＸＸ</dd>
-          <dt class="company__info-term">設立</dt>
-          <dd class="company__info-detail">2021年1月1日</dd>
-          <dt class="company__info-term">資本金</dt>
-          <dd class="company__info-detail">3,000,000円</dd>
-          <dt class="company__info-term">事業内容</dt>
-          <dd class="company__info-detail">Web制作・マーケティング</dd>
-          <dd class="company__info-detail company__info-detail--add">インターネットメディア事業</dd>
-          <dd class="company__info-detail company__info-detail--add">プロモーション企画・制作</dd>
-          <dd class="company__info-detail company__info-detail--add">ソーシャル企画・運営</dd>
+          <dt class="company__info-title">会社名</dt>
+          <dd class="company__info-data">ウェブエンターテイメントデザイン株式会社</dd>
+          <dt class="company__info-title">所在地</dt>
+          <dd class="company__info-data">東京都渋谷区桜丘町99-9 West Building 3F</dd>
+          <dt class="company__info-title">代表</dt>
+          <dd class="company__info-data">ＸＸＸＸＸＸ</dd>
+          <dt class="company__info-title">設立</dt>
+          <dd class="company__info-data">2021年1月1日</dd>
+          <dt class="company__info-title">資本金</dt>
+          <dd class="company__info-data">3,000,000円</dd>
+          <dt class="company__info-title">事業内容</dt>
+          <dd class="company__info-data">Web制作・マーケティング</dd>
+          <dd class="company__info-data company__info-data--add">インターネットメディア事業</dd>
+          <dd class="company__info-data company__info-data--add">プロモーション企画・制作</dd>
+          <dd class="company__info-data company__info-data--add">ソーシャル企画・運営</dd>
         </dl>
       </div>
 
-      <div class="company__img">
-        <img src="img/img02.png" alt="">
+      <div class="company__image">
+        <img class="company__img" src="img/img04.png" alt="">
       </div>
     </section>
   </main>
 
-  <footer id="footer" class="footer">
+  <footer class="footer">
     <div class="footer__wrapper wrapper">
-      <div class="footer__flex">
+      <div class="footer__content">
         <div class="footer__logo">
-          <img src="img/logo01.png" alt="Web Entertainment Design">
+          <img class="footer__logo-img" src="img/logo01.png" alt="Web Entertainment Design">
         </div>
         <div class="footer__info">
-          <p>
+          <p class="footer__info-text">
             Web Entertainment Design Inc.<br>
             West Building 3F<br>
             9-99 Sakuragaokacho Shibuya-ku<br>
             Tokyo, Japan 150-0031
           </p>
-          <p>T/99-9999-9999</p>
+          <p class="footer__info-phone">T/99-9999-9999</p>
         </div>
       </div>
       <p class="footer__copyright">&copy; Web Entertainment Design Inc.</p>
