@@ -67,11 +67,7 @@ li {
 
 .header__logo-link {
   display: block;
-}
-
-.header__logo {
   width: 120px;
-  line-height: 1px;
   padding-top: 10px;
 }
 
@@ -107,6 +103,10 @@ About
 
 .about__text {
   text-align: left;
+}
+
+.about__content-title{
+  margin: 10px 0;
 }
 
 /*-------------------------------------------
