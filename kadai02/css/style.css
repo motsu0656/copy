@@ -78,7 +78,7 @@ Recipe
 }
 
 .recipe__step-list {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .recipe__step-item {
