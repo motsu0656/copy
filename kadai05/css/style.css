@@ -121,6 +121,10 @@ li {
   object-fit: cover;
 }
 
+.news{
+  margin-bottom: 120px;
+}
+
 .news__list {
   display: flex;
   justify-content: space-between;
