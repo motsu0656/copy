@@ -48,6 +48,11 @@ li {
   margin: 0 auto;
 }
 
+.header__title {
+  width: 120px;
+  padding-top: 10px;
+}
+
 .header__nav-list {
   display: flex;
   padding: 10px 0;
@@ -67,8 +72,6 @@ li {
 
 .header__logo-link {
   display: block;
-  width: 120px;
-  padding-top: 10px;
 }
 
 /*-------------------------------------------
@@ -105,7 +108,7 @@ About
   text-align: left;
 }
 
-.about__content-title{
+.about__content-title {
   margin: 10px 0;
 }
 
