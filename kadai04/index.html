@@ -1,127 +1,138 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Mag88</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Mag88</title>
-  <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <header id="header">
+      <h1 class="header__logo"><img src="img/logo01.png" alt="Mag88"></h1>
+    </header>
 
-<body>
-  <header class="header">
-    <h1 class="header__logo"><img src="img/logo01.png" alt="Mag88"></h1>
-  </header>
-
-  <main>
-    <section class="magazine section">
-      <h2 class="section__title">A special, long article in a newspaper or magazine</h2>
-      <p>
-        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
-        テキストテキストテキストテキストテキストテキストテキストテキスト
-      </p>
-      <div class="magazine__items">
-        <a class="magazine__item" href="#">
-          <img src="img/img02.png" alt="テキストテキストテキストテキスト">
-          <div class="magazine__text">
-            <p class="magazine__item-title">Archive</p>
-            <p>
-              テキストテキストテキストテキスト<br>
-              テキストテキストテキスト
-            </p>
-          </div>
-        </a>
-        <a class="magazine__item" href="#">
-          <img src="img/img03.png" alt="テキストテキストテキストテキスト">
-          <div class="magazine__text">
-            <p class="magazine__item-title">New</p>
-            <p>
-              テキストテキストテキストテキスト<br>
-              テキストテキストテキスト
-            </p>
-          </div>
-        </a>
-      </div>
-    </section>
-
-    <section class="fashion section">
-      <div class="fashion__content section__content">
-        <h2 class="section__title">Fashion &amp; Style</h2>
+    <main>
+      <section id="magazine" class="section">
+        <h2 class="section__titl">A special, long article in a newspaper or magazine</h2>
         <p>
           テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
           テキストテキストテキストテキストテキストテキストテキストテキスト
         </p>
-        <a class="btn btn--primary" href="#">Read More</a>
-      </div>
-    </section>
-
-    <section class="catalog section section--gray">
-      <div class="catalog__items section__content">
-        <div class="catalog__item">
-          <img src="img/img04.png" alt="">
+        <div class="magazine__items">
+          <a class="magazine__item" href="#">
+            <img src="img/img02.png" alt="テキストテキストテキストテキスト">
+            <div class="magazine__text">
+              <p class="magazine__item-title">Archive</p>
+              <p>
+                テキストテキストテキストテキスト<br>
+                テキストテキストテキスト
+              </p>
+            </div>
+          </a>
+          <a class="magazine__item" href="#">
+            <img src="img/img03.png" alt="テキストテキストテキストテキスト">
+            <div class="magazine__text">
+              <p class="magazine__item-title">New</p>
+              <p>
+                テキストテキストテキストテキスト<br>
+                テキストテキストテキスト
+              </p>
+            </div>
+          </a>
         </div>
-        <div class="catalog__item">
-          <h2 class="section__title">Catalog</h2>
+      </section>
+
+      <section id="fashion">
+        <div class="section">
+          <h2 class="section__titl">Fashion &amp; Style</h2>
           <p>
+            テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
             テキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
+          <a class="btn" href="#">Read More</a>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__items section">
+          <div class="catalog__item">
+            <img src="img/img04.png" alt="">
+          </div>
+          <div class="catalog__item">
+            <h2 class="section__titl section__titl__antique">Catalog</h2>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="antique">
+        <div class="antique__items section">
+          <div class="antique__item">
+            <h2 class="section__titl section__titl__antique">Antique</h2>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <p>
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p>
+            <a class="btn" href="#">Read More</a>
+          </div>
+          <div class="antique__item">
+            <img src="img/img05.png" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div class="footer__items section">
+        <div class="footer__item">
+          <a href="index.html"><img src="img/logo01.png" alt="Mag88"></a>
+        </div>
+        <div class="footer__item">
+          <p class="footer__title">タイトル</p>
+          <ul>
+            <li>テキストテキストテキスト</li>
+            <li>テキストテキストテキスト</li>
+            <li>テキストテキストテキスト</li>
+            <li>テキストテキストテキスト</li>
+            <li>テキストテキストテキスト</li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <p class="footer__title">タイトルタイトルタイトル</p>
           <p>
-            テキストテキストテキストテキストテキストテキストテキストテキスト
-          </p>
-          <p>
-            テキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
         </div>
       </div>
-    </section>
+      <p class="footer__copyright">&copy; Mag88</p>
+    </footer>
 
-    <section class="antique section section--gray">
-      <div class="antique__items section__content">
-        <div class="antique__item">
-          <h2 class="section__title">Antique</h2>
-          <p>
-            テキストテキストテキストテキストテキストテキストテキストテキスト
-          </p>
-          <p>
-            テキストテキストテキストテキストテキストテキストテキストテキスト
-          </p>
-          <a class="btn btn--primary" href="#">Read More</a>
-        </div>
-        <div class="antique__item">
-          <img src="img/img05.png" alt="">
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer__items section__content">
-      <div class="footer__img">
-        <a href="index.html"><img src="img/logo01.png" alt="Mag88"></a>
-      </div>
-      <div class="footer__item">
-        <p class="footer__title">タイトル</p>
-        <ul>
-          <li>テキストテキストテキスト</li>
-          <li>テキストテキストテキスト</li>
-          <li>テキストテキストテキスト</li>
-        </ul>
-      </div>
-      <div class="footer__item">
-        <p class="footer__title">タイトルタイトルタイトル</p>
-        <p>
-          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
-        </p>
-      </div>
-    </div>
-    <p class="footer__copyright">&copy; Mag88</p>
-  </footer>
-
-</body>
+  </body>
 
 </html>

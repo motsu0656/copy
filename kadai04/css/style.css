@@ -1,5 +1,3 @@
-/* BEMの命名規則でコーディング */
-
 @charset "UTF-8";
 
 html {
@@ -28,21 +26,25 @@ li {
   list-style: none;
 }
 
-/*-------------------------------------------
-共通の設定
--------------------------------------------*/
-.section__content {
+/*
+中身のコンテンツの最大幅を設定し、共通で使用
+*/
+.section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 5%;
 }
 
-.section__title {
+.section__titl {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-/* ボタン */
+/*
+ボタン
+「display: inline-block;」を設定して
+paddingでボタンに幅と高さを持たせる。
+*/
 .btn {
   color: #2a2a2a;
   border: solid 1px #2a2a2a;
@@ -52,15 +54,16 @@ li {
   margin-top: 30px;
 }
 
-.btn--primary {
-  border-color: #000;
-  color: #000;
-}
-
 /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
-.header {
+/*
+height: 100vh;
+メインビジュアルを画面の高さにあわせる
+position: relative;
+ロゴの位置を固定するため、親要素の「position」に「relative」を設定
+*/
+#header {
   height: 100vh;
   background-image: url(../img/img01.png);
   background-size: cover;
@@ -70,6 +73,11 @@ li {
   position: relative;
 }
 
+/*
+ロゴ
+「position: absolute;」を設定してから、
+ top と right で位置を調整
+*/
 .header__logo {
   position: absolute;
   top: 30px;
@@ -77,9 +85,9 @@ li {
 }
 
 /*-------------------------------------------
-Magazineセクション
+Magazine
 -------------------------------------------*/
-.magazine {
+#magazine {
   text-align: center;
   margin-bottom: 80px;
 }
@@ -90,11 +98,19 @@ Magazineセクション
   margin-top: 40px;
 }
 
+/*
+テキストを上に重ねるために、
+親要素の「position」に「relative」を設定
+*/
 .magazine__item {
   width: 49%;
   position: relative;
 }
 
+/*
+「position: absolute;」を設定し、
+top、left、rightで位置を調整
+*/
 .magazine__text {
   max-width: 290px;
   color: #fff;
@@ -114,9 +130,9 @@ Magazineセクション
 }
 
 /*-------------------------------------------
-Fashionセクション
+Fashion
 -------------------------------------------*/
-.fashion {
+#fashion {
   height: 520px;
   background-image: url(../img/img02.png);
   background-size: cover;
@@ -128,12 +144,16 @@ Fashionセクション
 }
 
 /*-------------------------------------------
-Catalog & Antiqueセクション
+Catalog & Antique
 -------------------------------------------*/
 .catalog,
 .antique {
   background-color: #f5f5f5;
   padding: 60px 0;
+}
+
+.section__titl__antique {
+  margin-bottom: 40px;
 }
 
 .catalog__items,
@@ -160,10 +180,15 @@ Catalog & Antiqueセクション
   text-align: left;
 }
 
+.catalog__item p:last-child,
+.antique__item p:last-child {
+  margin-bottom: 0;
+}
+
 /*-------------------------------------------
 フッター
 -------------------------------------------*/
-.footer {
+#footer {
   background-color: #333;
   font-size: 0.750rem;
 }
@@ -203,31 +228,72 @@ Catalog & Antiqueセクション
 }
 
 /*-------------------------------------------
-SP対応
+SP
 -------------------------------------------*/
 @media screen and (max-width: 896px) {
 
-  .magazine__items,
-  .catalog__items,
-  .antique__items,
-  .footer__items {
+  /*-------------------------------------------
+  Magazine
+  -------------------------------------------*/
+  .magazine__items {
     flex-direction: column;
   }
 
-  .magazine__item,
-  .catalog__item,
-  .antique__item,
-  .footer__item {
+  .magazine__item {
     width: 100%;
   }
 
-  .magazine__item:first-child,
-  .catalog__item:first-child,
-  .antique__item:first-child {
+  .magazine__item:first-child {
     margin-bottom: 30px;
   }
 
-  .footer__img{
+  /*-------------------------------------------
+  Fashion
+  -------------------------------------------*/
+  #fashion {
+    padding-top: 35px;
+    margin-bottom: 50px;
+  }
+
+  /*-------------------------------------------
+  Catalog & Antique
+  -------------------------------------------*/
+  .catalog,
+  .antique {
+    padding: 30px 0;
+  }
+
+  .catalog__items,
+  .antique__items {
+    flex-direction: column;
+  }
+
+  .catalog__item,
+  .antique__item {
+    width: 100%;
+  }
+
+  .catalog__item:first-child,
+  .antique__item:first-child {
+    margin-bottom: 60px;
+  }
+
+  /*-------------------------------------------
+  フッター
+  -------------------------------------------*/
+  .footer__items {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer__item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .footer__item:first-child {
     text-align: center;
+    padding: 0;
   }
 }
