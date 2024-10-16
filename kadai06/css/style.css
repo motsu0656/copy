@@ -1,4 +1,8 @@
-/* BEMの命名規則でコーディング */
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
 
 body {
   background-color: #e6e2d7;
@@ -6,30 +10,18 @@ body {
   font-family: 'Noto Serif JP', serif;
 }
 
-.wrapper {
-  width: 100%;
-  max-width: 1024px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 a {
   color: #fff;
   text-decoration: none;
 }
 
-/* Header */
-.header {
-  width: 100%;
-  height: 100vh;
-  background-image: url(../img/img01.png);
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-  padding: 60px 80px;
-  margin-bottom: 180px;
-  position: relative;
-  writing-mode: vertical-rl;
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
 }
 
 .header__title {
@@ -45,14 +37,36 @@ a {
   width: 40px;
 }
 
-.header__nav {
-  display: block;
+.wrapper {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.nav__item {
-  margin-left: 25px;
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  width: 100%;
+  /* 背景を画面下まで設定 */
+  height: 100vh;
+  background-image: url(../img/mainvisual-pc.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding: 60px 80px;
+  margin-bottom: 180px;
+  /* 「オンラインストアを見る」ボタンを配置するためのposition */
+  position: relative;
+  writing-mode: vertical-rl;
 }
 
+/*
+「オンラインストアを見る」ボタン
+positionで左下に配置
+backgroundのrgbaで透過設定
+*/
 .header__onlinestore {
   background: rgba(255, 255, 255, 0.2);
   padding: 8px;
@@ -67,26 +81,40 @@ a {
   padding: 30px 18px;
 }
 
-/* News */
-.news {
+.header__onlinestore a:hover {
+  opacity: 0.7;
+}
+
+.nav__item {
+  margin-left: 25px;
+}
+
+/*-------------------------------------------
+News
+-------------------------------------------*/
+/*
+「display: flex」で横並びに配置
+そのままではタイトルが左にくるため、「row-reverse」で順序を入れ替える。
+*/
+#news {
   margin-bottom: 180px;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.section-title {
+.news-title {
   font-weight: normal;
+  line-height: 1;
   writing-mode: vertical-rl;
 }
 
-.section-title__en2 {
+.news-title .en {
   display: block;
   font-size: 0.875rem;
-  padding-top: 20px;
-  padding:16px 16px;
+  margin-left: 15px;
 }
 
-.section-title__ja {
+.news-title .ja {
   display: block;
   font-size: 2.25rem;
   letter-spacing: 0.1em;
@@ -107,37 +135,52 @@ a {
   padding: 15px 0 15px 30px;
 }
 
-/* Products */
+/*
+最後だけ左側に罫線を引く
+*/
+.news__title:last-child {
+  border-left: solid 1px #000;
+}
+
+/*-------------------------------------------
+Products（共通）
+-------------------------------------------*/
 .products {
   display: flex;
   margin-bottom: 180px;
 }
 
-.products__title {
+.products__title1,
+.products__title2 {
   font-weight: normal;
   line-height: 1;
 }
 
-.products__title.section-title__ja {
+.products__title1 .ja,
+.products__title2 .ja {
   font-size: 2rem;
   letter-spacing: 0.1em;
   margin-bottom: 18px;
 }
 
-.products__title.section-title__en {
+.products__title1 .en,
+.products__title2 .en {
   font-size: 0.875rem;
 }
 
-.products__image {
+/*
+画像の上にテキストを重ねるためのpositionを設定
+*/
+.products .img {
   width: 65%;
   margin-top: 100px;
   position: relative;
 }
 
-.products__image img {
-  max-width: 100%;
-}
-
+/*
+「position: absolute;」でテキストを画像の上に配置
+左右の配置位置は「#products1」と「#products2」で個別に指定
+*/
 .products__text {
   width: 56%;
   color: #fff;
@@ -147,41 +190,59 @@ a {
   bottom: -20px;
 }
 
-#products1{
+/*
+productsの共通定義以外は、idを指定（#products1、#products2）して個別に設定
+*/
+/*-------------------------------------------
+Products1
+-------------------------------------------*/
+/*
+そのままではタイトルが左にくるため、「row-reverse」で順序を入れ替える。
+*/
+#products1 {
   flex-direction: row-reverse;
 }
 
-.products__title1{
-  margin-left: 10px;
-  display: flex;
+.products__title1,
+.products__title2 {
+  margin-left: 20px;
+  writing-mode: vertical-lr;
 }
 
-.products__title2{
-  display: flex;
-}
-
-#products1 .products__text {
+.products__text__1 {
   background: rgba(249, 233, 6, 0.6);
   left: -20px;
 }
 
-#products2 .products__text {
+/*-------------------------------------------
+Products2
+-------------------------------------------*/
+.products__title2 {
+  margin-right: 20px;
+  writing-mode: vertical-rl;
+}
+
+.products__text__2 {
   background: rgba(149, 42, 38, 0.6);
   right: -20px;
 }
 
-.products__title2{
-  margin-right: 10px;
-}
-
-/* Shop */
-.shop iframe {
+/*-------------------------------------------
+Shop
+-------------------------------------------*/
+/*
+iframeのwidthに100%を指定して全幅で表示する
+「vertical-align: bottom;」を指定することで、Google Mapの下にできる隙間を消す
+*/
+#shop iframe {
   width: 100%;
   vertical-align: bottom;
 }
 
-/* Footer */
-.footer {
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+#footer {
   background-color: #000;
   color: #fff;
   padding: 80px 80px 30px 30px;
@@ -223,9 +284,20 @@ a {
   text-align: center;
 }
 
-/* Responsive Design */
-@media screen and (max-width:768px) {
-  .header {
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  /*-------------------------------------------
+  ヘッダー
+  -------------------------------------------*/
+  #header {
+    /* スマホの場合は背景画像を切り替える */
+    background-image: url(../img/mainvisual-sp.jpg);
     padding: 20px;
     margin-bottom: 80px;
   }
@@ -235,11 +307,14 @@ a {
     bottom: 20px;
   }
 
-  .news {
+  /*-------------------------------------------
+  News
+  -------------------------------------------*/
+  #news {
     margin-bottom: 80px;
   }
 
-  .section-title__ja {
+  .news-title .ja {
     font-size: 1.75rem;
   }
 
@@ -251,28 +326,80 @@ a {
     padding: 15px 12px 15px 5px;
   }
 
+  /*
+  スマホの場合は4つ目以降を非表示にする
+  */
+  .news__date:nth-of-type(n + 4) {
+    display: none;
+  }
+
   .news__title {
     padding: 15px 0 15px 12px;
   }
 
-  .products__title.section-title__ja {
-    font-size: 1.75rem;
+  /*
+  3つ目の左側に罫線を引く
+  */
+  .news__title:nth-of-type(3) {
+    border-left: solid 1px #000;
   }
 
-  .section-title__en{
+  /*
+  スマホの場合は4つ目以降を非表示にする
+  */
+  .news__title:nth-of-type(n + 4) {
     display: none;
   }
 
-  .products__image {
-    width: 90%;
-    margin-top: 70px;
-  }
-
+  /*-------------------------------------------
+  Products
+  -------------------------------------------*/
   .products {
     margin-bottom: 100px;
   }
 
-  .footer {
+  .products__title1 .ja,
+  .products__title2 .ja {
+    font-size: 1.5rem;
+  }
+
+  /*
+  スマホの場合は英語タイトルを非表示
+  */
+  .products__title1 .en,
+  .products__title2 .en {
+    display: none;
+  }
+
+  .products .img {
+    width: 90%;
+    margin-top: 70px;
+  }
+
+  .products__text {
+    width: 64%;
+    font-size: 0.875rem;
+    padding: 30px 0;
+  }
+
+  /*-------------------------------------------
+  Products1
+  -------------------------------------------*/
+  .products__title1 {
+    margin-left: 10px;
+  }
+
+  /*-------------------------------------------
+  Products2
+  -------------------------------------------*/
+  .products__title2 {
+    margin-right: 10px;
+  }
+
+  /*-------------------------------------------
+  フッター
+  -------------------------------------------*/
+  #footer {
     padding: 40px 20px 30px 20px;
   }
 
@@ -280,12 +407,12 @@ a {
     margin-left: 25px;
   }
 
+  .footer__menu-item {
+    margin-left: 10px;
+  }
+
   .footer__menu {
     font-size: 0.875rem;
     margin-right: 25px;
-  }
-
-  .footer__menu-item {
-    margin-left: 10px;
   }
 }
